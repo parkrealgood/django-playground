@@ -1,0 +1,14 @@
+services:
+
+  db:
+    image: postgres
+    container_name: postgres-server
+    restart: always
+    environment:
+      POSTGRES_USER: parkgood1020
+      POSTGRES_PASSWORD: parkgood1020
+      POSTGRES_DB: goodpark
+    ports:
+      - 5001:5432
+    volumes:
+      - ./data/:/var/lib/postgresql
